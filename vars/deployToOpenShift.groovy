@@ -4,7 +4,6 @@ def call(String openshiftCredentialsID, String openshiftClusterURL, String opens
             oc login ${openshiftClusterURL} --token=${OPENSHIFT_TOKEN} --insecure-skip-tls-verify=true
             oc project ${openshiftProject}
             oc new-app ${imageName}
-            oc expose svc/${imageName}
         """
     }
 }
